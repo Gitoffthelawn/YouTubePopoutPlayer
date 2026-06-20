@@ -1,10 +1,94 @@
 # Changelog
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [5.2.2] - 2025-11-09
+
+### Bug Fixes
+
+* Fix "This video is unavailable" (Error Code: 15)
+
+## [5.2.1] - 2025-10-25
+
+### Bug Fixes
+
+* Fix "Video player configuration error" (Error 153)
+
+## [5.2.0] - 2025-10-23
+
+### Bug Fixes
+
+* Fix controls not rendering in new YouTube UI
+* Fix "This video is unavailable" (Error code: 15)
+* Fix options panel width and horizontal scrolling issues
+
+## [5.1.2] - 2025-04-05
+
+### New Features
+
+* Added new option to control whether the popout player resumes the video from the current timestamp when opening (re #431)
+
+### Bug Fixes
+
+* Fix popout player not resuming the video from current timestamp (when enabled) (fixes #431)
+
+## [5.1.1] - 2025-03-29
+
+### Bug Fixes
+
+* Fix "Open Video in Popout Player" context menu incorrectly attempting to open as a playlist when used on links/videos containing both a video and a list/playlist (re #417)
+
+## [5.1.0] - 2025-02-23
+
+### New Features
+
+* Added support for Video On Demand (VOD) URLs (re #295)
+
+### Other
+
+* Migrate to Manifest v3
+* Updated to Material UI v5 (and React 18)
+
+## [5.0.0] - 2024-10-15
+
+### Other
+
+* Migrate to Manifest v3
+* Updated to Material UI v5 (and React 18)
+
+## [4.4.1] - 2023-06-21
+
+### Bug Fixes
+
+* Fix "Automatically Open on Video Pages" functionality in Chromium browsers
+* Only request optional `cookies` permission in Firefox (for multi-account containers support)
+* Remove default keyboard shortcuts for the following commands in Chromium browsers
+  * "Open popout player and close the current window/tab"
+  * "Open popout player without closing the current window/tab"
+
+## [4.4.0] - 2023-06-19
+
+### New Features
+
+* Added functionality for rotating videos in the Popout Player
+
+## [4.3.0] - 2022-05-28
+
+### New Features
+
+* Added support for YouTube shorts (closes #387)
+
+## [4.2.0] - 2022-28-04
+
+### New Features
+
+* Added new option to re-use any existing popout player window(s)/tab(s) instead of always opening a new one (closes #379)
+* Added new option to automatically open the popout player when navigating to any video page (re #367)
 
 ## [4.1.0] - 2021-24-09
 
@@ -126,7 +210,18 @@ The extension/add-on now supports translations. Currently the only translation o
 
 A new icon has been added to the lower right corner to allow opening the current video in a popout player. This should work for all YouTube videos, both directly on youtube.com and embedded in other web pages.
 
-[Unreleased]: https://github.com/rthaut/YouTubePopoutPlayer/compare/v4.1.0...HEAD
+[Unreleased]: https://github.com/rthaut/YouTubePopoutPlayer/compare/v5.2.2...HEAD
+[5.2.2]: https://github.com/rthaut/YouTubePopoutPlayer/compare/v5.2.1...v5.2.2
+[5.2.1]: https://github.com/rthaut/YouTubePopoutPlayer/compare/v5.2.0...v5.2.1
+[5.2.0]: https://github.com/rthaut/YouTubePopoutPlayer/compare/v5.1.2...v5.2.0
+[5.1.2]: https://github.com/rthaut/YouTubePopoutPlayer/compare/v5.1.1...v5.1.2
+[5.1.1]: https://github.com/rthaut/YouTubePopoutPlayer/compare/v5.1.0...v5.1.1
+[5.1.0]: https://github.com/rthaut/YouTubePopoutPlayer/compare/v5.0.0...v5.1.0
+[5.0.0]: https://github.com/rthaut/YouTubePopoutPlayer/compare/v4.4.1...v5.0.0
+[4.4.1]: https://github.com/rthaut/YouTubePopoutPlayer/compare/v4.4.0...v4.4.1
+[4.4.0]: https://github.com/rthaut/YouTubePopoutPlayer/compare/v4.3.0...v4.4.0
+[4.3.0]: https://github.com/rthaut/YouTubePopoutPlayer/compare/v4.2.0...v4.3.0
+[4.2.0]: https://github.com/rthaut/YouTubePopoutPlayer/compare/v4.1.0...v4.2.0
 [4.1.0]: https://github.com/rthaut/YouTubePopoutPlayer/compare/v4.0.0...v4.1.0
 [4.0.0]: https://github.com/rthaut/YouTubePopoutPlayer/compare/v3.1.1...v4.0.0
 [3.1.1]: https://github.com/rthaut/YouTubePopoutPlayer/compare/v3.1.0...v3.1.1

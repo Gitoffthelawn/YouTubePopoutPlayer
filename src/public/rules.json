@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        {
+          "header": "Referer",
+          "operation": "set",
+          "value": "https://www.youtube-nocookie.com/"
+        },
+        {
+          "header": "Referrer-Policy",
+          "operation": "set",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "||youtube.com/embed*__ytpp=1",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        {
+          "header": "Referer",
+          "operation": "set",
+          "value": "https://www.youtube-nocookie.com/"
+        },
+        {
+          "header": "Referrer-Policy",
+          "operation": "set",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "||youtube-nocookie.com/embed*__ytpp=1",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame"
+      ]
+    }
+  }
+]

@@ -12,7 +12,7 @@ order: 5
 
     <div class="card white">
         <div class="card-content">
-            <span class="card-title red-text"><strong>Popout Player Behavior</strong></span>
+            <span class="card-title red-text"><strong>Popout Player Behavior</strong> <span class="badge grey darken-3 white-text">Updated in v5.1.2</span></span>
             <p>These are the basic settings for configuring the YouTube Popout Player. You can control where the popout player opens, which controls are shown for video(s) in the popout player (if any), and whether or not video(s) start playing automatically and/or loop indefinitely.</p>
         </div>
 
@@ -30,6 +30,11 @@ order: 5
                 <dt>Open in a Tab</dt>
                 <dd>
                     <p>The popout player will open in a new tab in your current browser window.</p>
+                </dd>
+
+                <dt>Re-Use Existing Window/Tab <span class="badge grey darken-1 white-text">New in v4.2</span></dt>
+                <dd>
+                    <p>Enabling this will cause the popout player window/tab to be re-used (if it is already open) instead of always opening in a new window/tab. <strong>The default for this setting is disabled.</strong></p>
                 </dd>
 
                 <dt>Show Controls</dt>
@@ -65,9 +70,25 @@ order: 5
                     <p>This setting controls whether or not the video in the popout player begins playing automatically when the popout player is opened. <strong>The default for this setting is enabled.</strong></p>
                 </dd>
 
+                <dt>Resume Playback from Current Timestamp <span class="badge red white-text">New in v5.1.2</span></dt>
+                <dd>
+                    <p>This setting controls whether or not the video in the popout player resumes playing from the current timestamp when the popout player is opened. <strong>The default for this setting is enabled.</strong></p>
+                    <p><strong>Note</strong>: If the video is 5 seconds or less into playback, the popout player will start from the beginning instead of resuming from the current timestamp.</p>
+                </dd>
+
                 <dt>Loop Video(s)</dt>
                 <dd>
                     <p>This setting controls whether or not the video(s) in the popout player loop infinitely (until the popout player is closed). <strong>The default for this setting is disabled.</strong></p>
+                </dd>
+
+                <dt>Show Rotation Buttons <span class="badge red white-text">New in v4.4</span></dt>
+                <dd>
+                    <p>This setting controls whether or not buttons to rotate the video left or right are shown in the popout player. <strong>The default for this setting is enabled.</strong></p>
+                </dd>
+
+                <dt>Show Rotation Menu Items <span class="badge red white-text">New in v4.4</span></dt>
+                <dd>
+                    <p>This setting controls whether or not context (right-click) menu options to open the popout player initially rotated left or right are shown on video links. <strong>The default for this setting is disabled.</strong></p>
                 </dd>
             </dl>
         </div>
@@ -104,7 +125,7 @@ order: 5
                     <p><i class="small left material-icons red-text">lightbulb</i> <strong>Tip:</strong> This works best when also using the "Use Previous Position" mode.</p>
                 </dd>
 
-                <dt>Maximize the Popout Player Window <span class="badge red white-text">New in v4.1</span></dt>
+                <dt>Maximize the Popout Player Window <span class="badge grey darken-1 white-text">New in v4.1</span></dt>
                 <dd>
                     <p>The popout player window will be maximized (NOT fullscreen) automatically <em>immediately after</em> it is positioned.</p>
                     <p>When you select this setting, the popout player window will be positioned according to the "Popout Player Position" option, then it will be maximized. This should allow you to have the popout player window use the entire screen of a secondary display/monitor.</p>
@@ -200,7 +221,7 @@ order: 5
 
     <div class="card white">
         <div class="card-content">
-            <span class="card-title red-text"><strong>Advanced Settings</strong> <span class="badge grey darken-3 white-text">Updated in v4.0</span></span>
+            <span class="card-title red-text"><strong>Advanced Settings</strong> <span class="badge grey darken-3 white-text">Updated in v4.2</span></span>
             <p>These are the more advanced settings for configuring the YouTube Popout Player. Use caution when changing these settings, as they are a little more complex than the others.</p>
         </div>
 
@@ -236,6 +257,11 @@ order: 5
                 <dd>
                     <p>Enabling this will cause the popout player to be opened in the same <a class="red-text" href="https://support.mozilla.org/en-US/kb/containers">multi-account container (a.k.a. contextual identity)</a> as the original window/tab. <strong>The default for this setting is disabled.</strong></p>
                 </dd>
+
+                <dt>Automatically Open on Video Pages <span class="badge grey darken-1 white-text">New in v4.2</span></dt>
+                <dd>
+                    <p>Enabling this will automatically open the popout player when navigating to a YouTube video page. <strong>The default for this setting is disabled.</strong></p>
+                </dd>
             </dl>
         </div>
     </div>
@@ -269,7 +295,10 @@ order: 5
                                 <li>☑ AND if you are viewing a page on youtube.com</li>
                             </ul>
                         </td>
-                        <td><kbd>Ctrl</kbd> + <kbd>Up Arrow</kbd></td>
+                        <td>
+                            <strong>All Browsers:</strong><br>
+                            <kbd>Ctrl</kbd> + <kbd>Up Arrow</kbd>
+                        </td>
                     </tr>
                     <tr>
                         <td>
@@ -277,7 +306,11 @@ order: 5
                             <strong>Open popout player and close the current window/tab</strong><br>
                             <p>The current window/tab will be closed <span style="border-bottom: 1px solid">if you are viewing a page on youtube.com</span>, regardless of the "Close Original Window/Tab" setting.</p>
                         </td>
-                        <td><kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>Page Up</kbd></td>
+                        <td>
+                            <strong>Firefox:</strong><br>
+                            <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>Page Up</kbd><br>
+                            <p><strong>Note:</strong> Other browsers do not have a default key binding upon installation, but you can manually set one.</p>
+                        </td>
                     </tr>
                     <tr>
                         <td>
@@ -285,7 +318,31 @@ order: 5
                             <strong>Open popout player without closing the current window/tab</strong><br>
                             <p>The current window/tab will not be closed, regardless of the "Close Original Window/Tab" setting.</p>
                         </td>
-                        <td><kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>Page Down</kbd></td>
+                        <td>
+                            <strong>Firefox:</strong><br>
+                            <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>Page Down</kbd><br>
+                            <p><strong>Note:</strong> Other browsers do not have a default key binding upon installation, but you can manually set one.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="badge red white-text">New in v4.4</span>
+                            <strong>Rotate the current video to the left by 90 degrees</strong>
+                        </td>
+                        <td>
+                            <strong>All Browsers:</strong><br>
+                            <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>A</kbd>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="badge red white-text">New in v4.4</span>
+                            <strong>Rotate the current video to the right by 90 degrees</strong>
+                        </td>
+                        <td>
+                            <strong>All Browsers:</strong><br>
+                            <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>D</kbd>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -301,7 +358,7 @@ order: 5
 <div id="modal-{{screenshot.name | slugify}}-screenshot" class="modal">
     <div class="modal-content center white">
         <img class="responsive-img" src="{{ screenshot.path | relative_url }}" alt="Popout Player {{screenshot.name}} Options Screenshot" />
-        <p class="text-left"><em>Screenshots are taken from <strong>v4.0</strong> and <strong>v4.1</strong> and may not accurately represent current functionality.</em></p>
+        <p class="text-left"><em>Screenshots are taken from <strong>v4.0</strong> to <strong>v4.4</strong> and may not accurately represent current functionality.</em></p>
     </div>
     <div class="modal-footer">
         <button class="btn red modal-close"><i class="material-icons left">close</i> Close</button>
